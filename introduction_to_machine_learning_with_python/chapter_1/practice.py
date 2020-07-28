@@ -1,6 +1,8 @@
 import numpy as np
 from scipy import sparse
 import matplotlib.pyplot as plt
+from IPython.display import display
+import pandas as pd
 
 # numpy array
 x = np.array([[1, 2, 3], [4, 5, 6]])
@@ -27,4 +29,18 @@ x = np.linspace(-10, 10, 100)
 # Create a second array using sine
 y = np.sin(x)
 # The plot function makes a line chart of one array against another
-plt.plot(x,y, marker="x")
+plt.plot(x, y, marker="x")
+
+# Create a simple dataset of people
+data = {
+  "Name": ["John", "Anna", "Peter", "Linda"],
+  "Location": ["Newn York", "Paris", "Berlin", "London"],
+  "Age": [24,13,53,33]
+}
+data_pandas = pd.DataFrame(data)
+
+# IPython.display allows "pretty printing of dataframes"
+display(data_pandas)
+
+# Select all rows that have age column >30
+display(data_pandas[data_pandas.Age > 30])
