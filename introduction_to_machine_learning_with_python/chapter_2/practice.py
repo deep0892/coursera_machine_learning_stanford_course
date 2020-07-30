@@ -12,7 +12,7 @@ import mglearn
 import pandas as pd
 
 
-# In[10]:
+# In[39]:
 
 
 # generate forge dataset
@@ -22,6 +22,18 @@ plt.legend(["Class 0", "Class 1"], loc=4)
 plt.xlabel("First feature")
 plt.ylabel("Second feature")
 print("X.shape: {}".format(X.shape))
+
+
+# In[40]:
+
+
+mglearn.plots.plot_knn_classification(n_neighbors=1)
+
+
+# In[41]:
+
+
+mglearn.plots.plot_knn_classification(n_neighbors=3)
 
 
 # In[14]:
